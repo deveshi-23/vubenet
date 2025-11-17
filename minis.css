@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  overflow-y: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.main-header {
+  background: #111;
+  color: #5a4bff;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* FULL PAGE SCROLL */
+.minis-container {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  padding-top: 70px;   /* space for header */
+}
+
+/* EACH VIDEO SECTION */
+.mini {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mini video {
+  width: 420px;          
+  max-width: 90vw;       
+  height: 90vh;         
+  border-radius: 14px;
+  box-shadow: 0 0 22px rgba(255,255,255,0.15);
+  object-fit: cover;     
+}
+
+
+
+.video-actions {
+  position: absolute;
+  right: calc(50% - 210px);   /* aligns with the video width */
+  top: 50%;
+  transform: translateY(-50%);
+  
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+/* ICON STYLE */
+.video-actions i {
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.video-actions i:hover {
+  transform: scale(1.2);
+  color: #8257ff;
+}
+
+
+/* -- NAVBAR HEADER FOR MINIS --- */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #2f2c2c;
+  padding: 15px 25px;
+  z-index: 1000;
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+}
+
+/*  SEARCH BAR */
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 40%;                
+  max-width: 500px;
+  background-color: #1a1a1a;  
+  padding: 8px 15px;
+  border-radius: 30px;        
+  border: 1px solid #5a4bff; 
+  margin: 0 auto;
+}
+
+/* INPUT FIELD */
+.search-bar input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+}
+
+/* SEARCH ICON */
+.search-bar i {
+  color: #aaa;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+/* LEFT SIDEBAR */
+.left-sidebar {
+  width: 240px;
+  height: calc(100vh - 80px);
+  background-color: #2b2828;
+  color: #fff;
+  padding: 20px;
+  font-family: Tahoma, sans-serif;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  border-right: 1px solid #776ed4;
+  overflow-y: auto;
+}
+
+/* Sidebar Section Titles */
+.left-sidebar h3 {
+  font-size: 15px;
+  color: #a9a9ff;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+/* Sidebar List */
+.left-sidebar ul {
+  list-style: none;
+}
+
+.left-sidebar ul li {
+  padding: 8px 0;
+  color: #ddd;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.left-sidebar ul li:hover {
+  color: #7d6dff;
+}
+
+/* Create Post Button */
+.create-post-btn {
+  width: 100%;
+  background-color: #5a4bff;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+/* POST BUTTON */
+.create-post-btn {
+  width: 100%;
+  background-color: #5a4bff;
+  border: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.create-post-btn:hover {
+  background-color: #4a3ed8;
+}
+
+.left-sidebar {
+  z-index: 2000;
+}
+
+
+.mini video {
+  z-index: 10;
+  position: relative;
+}
+.video-actions {
+  z-index: 20;
+}

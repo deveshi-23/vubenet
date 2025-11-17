@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #030303;
+}
+h1{
+  color: #5a4bff;
+}
+
+header.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #2f2c2c;
+  padding: 15px 25px;
+  z-index: 1000;
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Chat button */
+.dropbtn {
+  color: #ccc;
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1a1a1a;
+  min-width: 180px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  color: #ccc;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+  color: #5a4bff;
+}
+
+/* Show on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Highlight Chat on hover */
+.dropdown:hover .dropbtn {
+  color: #5a4bff;
+}
+
+/* SEARCH BAR CONTAINER */
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 40%;        
+  max-width: 500px; 
+  background-color: #1a1a1a;
+  padding: 8px 15px;
+  border-radius: 30px; 
+  border: 1px solid #5a4bff;
+  margin: 0 40px; 
+}
+
+/* SEARCH INPUT */
+.search-bar input {
+  flex: 1;                
+  background: none;       
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+}
+
+/* SEARCH ICON */
+.search-bar i {
+  color: #aaa;
+  font-size: 18px;
+  margin-left: 10px;   
+}
+
+
+
+.left-sidebar {
+  width: 240px;
+  height: calc(100vh - 80px);   /* full height minus header */
+  background-color: #2b2828;
+  color: #fff;
+  padding: 20px;
+  font-family: Tahoma, sans-serif;
+
+  position: fixed;
+  top: 80px;
+  left: 0;
+
+  border-right: 1px solid #776ed4;
+
+  overflow-y: auto;   /* scrollable */
+}
+
+/* SECTION TITLES */
+.left-sidebar h3 {
+  font-size: 15px;
+  color: #a9a9ff;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+/* SIDEBAR LIST */
+.left-sidebar ul {
+  list-style: none;
+}
+
+.left-sidebar ul li {
+  padding: 8px 0;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.left-sidebar ul li:hover {
+  color: #7d6dff;
+}
+
+/* CREATE POST BUTTON */
+.create-post-btn {
+  width: 100%;
+  background-color: #5a4bff;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.create-post-btn:hover {
+  background-color: #4a3ed8;
+}
+
+/* HR LINES */
+.left-sidebar hr {
+  border: none;
+  border-bottom: 1px solid #444;
+  margin: 15px 0;
+}
+
+/* POST BUTTON */
+.create-post-btn {
+  width: 100%;
+  background-color: #5a4bff;
+  border: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.create-post-btn:hover {
+  background-color: #473ecc;
+}
+
+main {
+  margin-left: 250px; 
+  padding: 20px;
+}
+
+.post-img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 8px;
+  display: block;
+}
+
+.post1{
+  margin-top: 60px;
+}
+
+.post {
+  overflow: visible;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 600px;
+  color: #c5c4cc;  
+  font-family:'Times New Roman', Times, serif;  
+  
+  
+}
+
+.post h2 {
+  margin-top: 0;
+  color: #fff;
+}
+
+
+
+.translate-btn {
+  background-color: #5d50b8;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.translate-btn:hover {
+  background-color: #09224e;
+}
+
+.post-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.post-actions i {
+  color: #ccc;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.post-actions i:hover {
+  color: #2253a6;
+  transform: scale(1.1);
+}
+
+body {
+  margin: 0;
+  background: #000;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.main-header {
+  background: #111;
+  color: #8257ff;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+

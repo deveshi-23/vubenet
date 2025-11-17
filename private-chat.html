@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Private Chat Room - VubeNet</title>
+  <link rel="stylesheet" href="private-chat.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<!-- TOP HEADER (same as other pages) -->
+<header class="main-header">
+
+  <div class="logo-area">
+    <h1>VubeNet</h1>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search VubeNet" />
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="minis.html">Minis</a>
+
+    <div class="dropdown">
+      <a class="dropbtn">Chat ▾</a>
+      <div class="dropdown-content">
+        <a href="public-chat.html">Public Chat Room</a>
+        <a href="private-chat.html">Private Chat Room</a>
+      </div>
+    </div>
+
+    <a href="profile.html">Profile</a>
+    <a href="login.html">Login</a>
+  </div>
+
+</header>
+
+<!-- PRIVATE CHAT AREA -->
+<div class="chat-page">
+
+  <!-- LEFT SIDEBAR (CHAT ROOMS LIST) -->
+  <aside class="chat-sidebar">
+    <h3>Chat Rooms</h3>
+    <ul>
+      <li><a href="public-chat.html">🌐 Public Chat Room</a></li>
+      <li class="active"><a href="private-chat.html">🔒 Private Chat Room</a></li>
+      <li><a href="#">Create New Private Room</a></li>
+      <li><a href="#">Direct Messages</a></li>
+    </ul>
+  </aside>
+
+  <!-- MAIN PRIVATE CHAT WINDOW -->
+  <div class="chat-container">
+
+      <div class="chat-header">
+        <h2>Private Chat</h2>
+        <p class="subtitle">@you & @friend</p>
+      </div>
+
+      <div class="messages">
+
+        <div class="message other">
+          <strong>@friend</strong>
+          <p>I am leaving for the trip tomm!!!!😄</p>
+        </div>
+
+        <div class="message you">
+          <strong>@you</strong>
+          <p>Yaayyy...wish i could have also joined</p>
+        </div>
+
+        <div class="message other">
+          <strong>@friend</strong>
+          <p>Don't worry we will go together the next trip, just plan your holidays from advance from next time</p>
+        </div>
+
+        <div class="message you">
+          <strong>@you</strong>
+          <p>yupppp</p>
+        </div>
+
+      </div>
+
+      <!-- INPUT -->
+      <div class="chat-input">
+        <input type="text" placeholder="Type a message..." />
+        <button><i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
