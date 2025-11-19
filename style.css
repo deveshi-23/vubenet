@@ -28,20 +28,29 @@ header.main-header {
 }
 
 /* Dropdown container */
-.dropdown {
+/* .dropdown {
   position: relative;
   display: inline-block;
+} */
+.navbar a{
+  color:#ccc;
+  margin-left:20px;
+  text-decoration:none;
+}
+
+.navbar a:hover{
+  color:#5a4bff;
 }
 
 /* Chat button */
-.dropbtn {
+/* .dropbtn {
   color: #ccc;
   padding: 0 10px;
   text-decoration: none;
-}
+} */
 
 /* Dropdown menu */
-.dropdown-content {
+/* .dropdown-content {
   display: none;
   position: absolute;
   background-color: #1a1a1a;
@@ -49,31 +58,31 @@ header.main-header {
   border: 1px solid #444;
   border-radius: 5px;
   z-index: 1000;
-}
+} */
 
 /* Dropdown links */
-.dropdown-content a {
+/* .dropdown-content a {
   color: #ccc;
   padding: 10px 15px;
   text-decoration: none;
   display: block;
   font-size: 14px;
-}
+} */
 
-.dropdown-content a:hover {
+/* .dropdown-content a:hover {
   background-color: #333;
   color: #5a4bff;
-}
+} */
 
 /* Show on hover */
-.dropdown:hover .dropdown-content {
+/* .dropdown:hover .dropdown-content {
   display: block;
-}
+} */
 
 /* Highlight Chat on hover */
-.dropdown:hover .dropbtn {
+/* .dropdown:hover .dropbtn {
   color: #5a4bff;
-}
+} */
 
 /* SEARCH BAR CONTAINER */
 .search-bar {

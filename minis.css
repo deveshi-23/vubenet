@@ -9,6 +9,15 @@ body {
   overflow-y: hidden;
   font-family: Arial, sans-serif;
 }
+.navbar a{
+  color:#ccc;
+  margin-left:20px;
+  text-decoration:none;
+}
+
+.navbar a:hover{
+  color:#5a4bff;
+}
 
 /* HEADER */
 .main-header {
