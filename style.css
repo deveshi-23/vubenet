@@ -283,3 +283,43 @@ body {
   z-index: 100;
 }
 
+/* Comment box is hidden initially */
+.comment-box {
+  display: none;
+  position: absolute;
+  right: -350px;      /* pushes box to the right of post */
+  top: 0;
+  width: 300px;
+  background: #1b1b1b;
+  border: 1px solid #444;
+  padding: 15px;
+  border-radius: 8px;
+  height: 580px;
+}
+
+/* Make post container positioned so absolute works */
+.post {
+  position: relative;
+}
+
+/* Comment box textarea */
+.comment-box textarea {
+  width: 100%;
+  height: 500px;
+  background: #111;
+  color: white;
+  border: 1px solid #555;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.post-comment {
+  margin-top:0px;
+  width: 100%;
+  padding: 8px;
+  background: #5a4bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

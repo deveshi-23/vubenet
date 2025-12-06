@@ -132,6 +132,12 @@
          <i class="fa-regular fa-comment"></i>
          <i class="fa-solid fa-share"></i>
       </div>
+      <!-- HIDDEN COMMENT BOX -->
+      <div class="comment-box">
+        <h3>Comments</h3>
+        <textarea placeholder="Write a comment..."></textarea>
+        <button class="post-comment">Post</button>
+      </div>
     </div>
 
     <div class="post">
@@ -153,6 +159,12 @@
          <i class="fa-regular fa-comment"></i>
          <i class="fa-solid fa-share"></i>
       </div>
+      <!-- HIDDEN COMMENT BOX -->
+      <div class="comment-box">
+        <h3>Comments</h3>
+        <textarea placeholder="Write a comment..."></textarea>
+        <button class="post-comment">Post</button>
+      </div>
     </div>
 
     <div class="post">
@@ -170,6 +182,12 @@
          <i class="fa-regular fa-comment"></i>
          <i class="fa-solid fa-share"></i>
       </div>
+      <!-- HIDDEN COMMENT BOX -->
+      <div class="comment-box">
+        <h3>Comments</h3>
+        <textarea placeholder="Write a comment..."></textarea>
+        <button class="post-comment">Post</button>
+      </div>
 
     </div>
   </main>
@@ -177,6 +195,31 @@
   <footer>
     <p>© 2025 VubeNet. All rights reserved.</p>
   </footer>
+
+<script>
+  // Get every comment icon
+  const commentIcons = document.querySelectorAll('.fa-comment');
+
+  // Add click event to each comment icon
+  commentIcons.forEach(icon => {
+    icon.addEventListener('click', () => {
+
+      // Find the post that this icon belongs to
+      const post = icon.closest('.post');
+
+      // Find the comment box inside that post
+      const commentBox = post.querySelector('.comment-box');
+
+      // Toggle visibility
+      if (commentBox.style.display === "block") {
+        commentBox.style.display = "none";
+      } else {
+        commentBox.style.display = "block";
+      }
+    });
+  });
+</script>
+
 
 </body>
 </html>
