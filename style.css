@@ -3,9 +3,14 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   background-color: #030303;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
 }
+
 h1{
   color: #5a4bff;
 }
@@ -19,6 +24,8 @@ header.main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
 
   background-color: #2f2c2c;
   padding: 15px 25px;
@@ -27,14 +34,15 @@ header.main-header {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow';
 }
 
-/* Dropdown container */
-/* .dropdown {
-  position: relative;
-  display: inline-block;
-} */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
 .navbar a{
   color:#ccc;
-  margin-left:20px;
+  margin-left: 0;
   text-decoration:none;
 }
 
@@ -42,19 +50,19 @@ header.main-header {
   color:#5a4bff;
 }
 
-
-
 /* SEARCH BAR CONTAINER */
 .search-bar {
   display: flex;
   align-items: center;
   width: 40%;        
-  max-width: 500px; 
+  max-width: 500px;
+  min-width: 200px;
   background-color: #1a1a1a;
   padding: 8px 15px;
   border-radius: 30px; 
   border: 1px solid #5a4bff;
-  margin: 0 40px; 
+  margin: 0 20px;
+  flex: 1;
 }
 
 /* SEARCH INPUT */
@@ -74,11 +82,9 @@ header.main-header {
   margin-left: 10px;   
 }
 
-
-
 .left-sidebar {
   width: 240px;
-  height: calc(100vh - 80px);   /* full height minus header */
+  height: calc(100vh - 80px);
   background-color: #2b2828;
   color: #fff;
   padding: 20px;
@@ -90,7 +96,8 @@ header.main-header {
 
   border-right: 1px solid #776ed4;
 
-  overflow-y: auto;   /* scrollable */
+  overflow-y: auto;
+  transition: transform 0.3s ease;
 }
 
 /* SECTION TITLES */
@@ -123,14 +130,15 @@ header.main-header {
   border: none;
   color: white;
   padding: 10px;
-  border-radius: 6px;
+  border-radius: 20px;
   cursor: pointer;
   font-size: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .create-post-btn:hover {
-  background-color: #4a3ed8;
+  background-color: #473ecc;
 }
 
 /* HR LINES */
@@ -140,38 +148,23 @@ header.main-header {
   margin: 15px 0;
 }
 
-/* POST BUTTON */
-.create-post-btn {
-  width: 100%;
-  background-color: #5a4bff;
-  border: none;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 20px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.create-post-btn:hover {
-  background-color: #473ecc;
-}
-
 main {
   margin-left: 250px; 
   padding: 20px;
+  margin-top: 80px;
 }
 
 .post-img {
   width: 100%;
   height: auto;
   margin-top: 10px;
+  margin-bottom: 15px;
   border-radius: 8px;
   display: block;
 }
 
 .post1{
-  margin-top: 60px;
+  margin-top: 0;
 }
 
 .post {
@@ -181,19 +174,23 @@ main {
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   color: #c5c4cc;  
-  font-family:'Times New Roman', Times, serif;  
-  
-  
+  font-family:'Times New Roman', Times, serif;
+  position: relative;
 }
 
 .post h2 {
   margin-top: 0;
+  margin-bottom: 15px;
   color: #fff;
 }
 
-
+.post p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
 
 .translate-btn {
   background-color: #5d50b8;
@@ -202,6 +199,7 @@ main {
   padding: 8px 15px;
   border-radius: 5px;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .translate-btn:hover {
@@ -210,6 +208,8 @@ main {
 
 .post-actions {
   margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #333;
   display: flex;
   gap: 20px;
   font-size: 20px;
@@ -226,28 +226,11 @@ main {
   transform: scale(1.1);
 }
 
-body {
-  margin: 0;
-  background: #000;
-  font-family: Arial, sans-serif;
-  overflow-x: hidden;
-}
-
-.main-header {
-  background: #111;
-  color: #8257ff;
-  padding: 15px;
-  text-align: center;
-  position: fixed;
-  width: 100%;
-  z-index: 100;
-}
-
 /* Comment box is hidden initially */
 .comment-box {
   display: none;
   position: absolute;
-  right: -350px;      /* pushes box to the right of post */
+  right: -350px;
   top: 0;
   width: 300px;
   background: #1b1b1b;
@@ -257,11 +240,6 @@ body {
   height: 580px;
 }
 
-/* Make post container positioned so absolute works */
-.post {
-  position: relative;
-}
-
 /* Comment box textarea */
 .comment-box textarea {
   width: 100%;
@@ -269,12 +247,13 @@ body {
   background: #111;
   color: white;
   border: 1px solid #555;
-  padding: 3px;
+  padding: 10px;
   border-radius: 5px;
+  font-family: Arial, sans-serif;
 }
 
 .post-comment {
-  margin-top:0px;
+  margin-top: 10px;
   width: 100%;
   padding: 8px;
   background: #5a4bff;
@@ -282,4 +261,183 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.post-comment:hover {
+  background-color: #473ecc;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+
+/* Large tablets and small laptops */
+@media (max-width: 1024px) {
+  .left-sidebar {
+    width: 200px;
+  }
+
+  main {
+    margin-left: 210px;
+  }
+
+  .post {
+    max-width: 500px;
+  }
+
+  .comment-box {
+    right: -320px;
+    width: 280px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 968px) {
+  .left-sidebar {
+    transform: translateX(-100%);
+    z-index: 999;
+  }
+
+  .left-sidebar.active {
+    transform: translateX(0);
+  }
+
+  main {
+    margin-left: 0;
+    padding: 15px;
+  }
+}
+
+/* Tablets and below */
+@media (max-width: 768px) {
+  .main-header {
+    padding: 12px 15px;
+    justify-content: center;
+  }
+
+  .logo-area h1 {
+    font-size: 1.2rem;
+  }
+
+  .search-bar {
+    order: 3;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .navbar {
+    order: 2;
+    justify-content: center;
+  }
+
+  .left-sidebar {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 240px;
+    height: calc(100vh - 80px);
+    transform: translateX(-100%);
+  }
+
+  .left-sidebar.active {
+    transform: translateX(0);
+  }
+
+  main {
+    margin-left: 0;
+    margin-top: 80px;
+  }
+
+  .post {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  /* Move comment box below post on tablets */
+  .comment-box {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+  }
+
+  .comment-box textarea {
+    height: 150px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .main-header {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  .navbar {
+    gap: 10px;
+  }
+
+  .navbar a {
+    font-size: 0.9rem;
+  }
+
+  .search-bar {
+    padding: 6px 12px;
+  }
+
+  .search-bar input {
+    font-size: 14px;
+  }
+
+  .left-sidebar {
+    width: 200px;
+    padding: 15px;
+  }
+
+  .left-sidebar h3 {
+    font-size: 14px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .post {
+    padding: 12px;
+  }
+
+  .post h2 {
+    font-size: 1.1rem;
+  }
+
+  .post-actions {
+    font-size: 0.9rem;
+    gap: 15px;
+  }
+
+  .translate-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+  h1 {
+    font-size: 0.9rem;
+  }
+
+  .navbar a {
+    font-size: 0.8rem;
+  }
+
+  .post h2 {
+    font-size: 1rem;
+  }
+
+  .post-actions {
+    font-size: 0.85rem;
+  }
 }
