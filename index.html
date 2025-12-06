@@ -128,7 +128,7 @@
       Discover your space, your community, your vibe — all in one place!</p>
       <button class="translate-btn">Translate</button>
       <div class="post-actions">
-         <i class="fa-regular fa-thumbs-up"></i>
+         <i class="fa-regular fa-thumbs-up like-btn"></i>
          <i class="fa-regular fa-comment"></i>
          <i class="fa-solid fa-share"></i>
       </div>
@@ -155,7 +155,7 @@
   </p></p>
       <button class="translate-btn">Translate</button>
       <div class="post-actions">
-         <i class="fa-regular fa-thumbs-up"></i>
+         <i class="fa-regular fa-thumbs-up like-btn"></i>
          <i class="fa-regular fa-comment"></i>
          <i class="fa-solid fa-share"></i>
       </div>
@@ -178,7 +178,7 @@
     Feel free to drop your own travel stories or suggestions below! 🌄</p>
       <button class="translate-btn">Translate</button>
       <div class="post-actions">
-         <i class="fa-regular fa-thumbs-up"></i>
+         <i class="fa-regular fa-thumbs-up like-btn"></i>
          <i class="fa-regular fa-comment"></i>
          <i class="fa-solid fa-share"></i>
       </div>
@@ -218,6 +218,20 @@
       }
     });
   });
+
+  // LIKE BUTTON TOGGLE
+const likeButtons = document.querySelectorAll('.like-btn');
+
+likeButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('fa-regular');
+    btn.classList.toggle('fa-solid');
+
+    // Optional: change color when liked
+    btn.classList.toggle('liked');
+  });
+});
+
 </script>
 
 
